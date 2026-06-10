@@ -1,0 +1,125 @@
+/* components/ComparisonSection.module.css */
+.section {
+  background-color: var(--neutral-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.cardBad,
+.cardGood {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-line);
+}
+
+.cardBad {
+  /* 경고 포인트 컬러 앰버 #FFB020 활용 */
+  border-top: 6px solid var(--accent-gold); 
+}
+
+.cardGood {
+  /* 포인트 컬러 워터 블루 #00AEEF 활용 */
+  border-top: 6px solid var(--primary-ocean);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.badgeWarning {
+  display: inline-block;
+  background-color: rgba(255, 176, 32, 0.1);
+  color: var(--accent-gold); /* 앰버 */
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.badgeOk {
+  display: inline-block;
+  background-color: rgba(0, 174, 239, 0.1);
+  color: var(--primary-ocean); /* 워터 블루 */
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* 카드 제목 - PC: 22~28px (24px 설정) */
+.cardTitle {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--primary-deep);
+  letter-spacing: -0.5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.xIcon {
+  color: #E53E3E;
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: 3px;
+}
+
+.oIcon {
+  color: var(--primary-ocean); /* 워터 블루 */
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: 3px;
+}
+
+/* 카드 본문 - PC: 16~18px (16px 설정) */
+.itemText {
+  font-size: 16px;
+  color: var(--neutral-dark);
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardBad,
+  .cardGood {
+    padding: 24px;
+  }
+  
+  /* 모바일 카드 제목: 20~24px (22px 설정) */
+  .cardTitle {
+    font-size: 22px;
+  }
+  
+  /* 모바일 카드 본문: 15~17px (15px 설정) */
+  .itemText {
+    font-size: 15px;
+  }
+}

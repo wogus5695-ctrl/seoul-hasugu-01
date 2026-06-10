@@ -1,0 +1,191 @@
+/* components/ServiceSection.module.css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4개 카드를 균형감 있게 2x2 배치 */
+  gap: 32px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid rgba(11, 31, 51, 0.08);
+  border-radius: 16px;
+  padding: 0; /* 패딩 제거 (이미지가 카드 가로폭을 가득 채우도록 설정) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-ocean);
+  box-shadow: 0 20px 40px rgba(0, 174, 239, 0.1);
+}
+
+/* 카드 상단 이미지 영역 */
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 240px; /* PC 이미지 비율에 맞춰 240px 높이 설정 */
+  overflow: hidden;
+  background-color: var(--neutral-light);
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05); /* 마우스 호버 시 이미지 줌인 */
+}
+
+/* 카드 텍스트 내용 영역 */
+.cardContent {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* 카드 제목 */
+.cardTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-ocean); /* 브랜드 컬러(워터 블루)로 변경 */
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+/* 카드 본문 */
+.cardDesc {
+  font-size: 15px;
+  color: var(--neutral-dark);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  word-break: keep-all;
+  white-space: pre-line;
+}
+
+.symptomsBox {
+  margin-top: auto; /* 하단 밀어내기 */
+  border-top: 1px solid rgba(11, 31, 51, 0.08);
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.symptomLabel {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary-ocean);
+  background-color: rgba(0, 174, 239, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.symptomValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neutral-dark);
+  letter-spacing: -0.3px;
+}
+
+.footerArea {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ctaBox a {
+  font-size: 20px;
+  padding: 18px 48px;
+  box-shadow: 0 8px 25px rgba(255, 176, 32, 0.25);
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ctaBox a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 176, 32, 0.35);
+}
+
+.onlyPc {
+  display: inline;
+}
+
+/* 태블릿 (1023px 이하) */
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .cardImageWrapper {
+    height: 200px; /* 태블릿에서는 이미지 높이 조절 */
+  }
+  
+  .cardContent {
+    padding: 24px 24px 28px;
+  }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .cardImageWrapper {
+    height: 180px; /* 모바일 이미지 높이 조절 */
+  }
+  
+  .cardContent {
+    padding: 20px 20px 24px;
+  }
+  
+  .cardTitle {
+    font-size: 20px;
+  }
+  
+  .cardDesc {
+    font-size: 14.5px;
+    margin-bottom: 20px;
+  }
+  
+  .footerArea {
+    margin-top: 40px;
+  }
+  
+  .ctaBox a {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+  
+  .onlyPc {
+    display: none;
+  }
+}
+
+.highlight {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-ocean); /* 브랜드 컬러(워터 블루) */
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+}
+
+@media (max-width: 767px) {
+  .highlight {
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+  }
+}
+

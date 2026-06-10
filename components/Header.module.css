@@ -1,0 +1,210 @@
+/* components/Header.module.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: all var(--transition-normal);
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scrolled {
+  padding: 16px 0;
+  background-color: rgba(11, 31, 51, 0.96); /* 딥 네이비 #0B1F33 스키마 */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.logoText span {
+  color: var(--primary-ocean); /* 워터 블루 포인팅 */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color var(--transition-fast);
+  position: relative;
+  padding: 4px 0;
+}
+
+.menu a:hover {
+  color: var(--primary-ocean); /* 워터 블루 호버 */
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-ocean);
+  transition: width var(--transition-fast);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.phoneBtn {
+  background-color: var(--accent-gold); /* 앰버 #FFB020 */
+  color: var(--primary-deep); /* 딥 네이비 */
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  /* CTA 버튼: PC 18~22px (18px 적용) */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background var(--transition-fast);
+}
+
+.phoneBtn:hover {
+  background-color: #FFA000;
+}
+
+.phoneIcon {
+  font-size: 1rem;
+}
+
+.menuToggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--white);
+  position: relative;
+  transition: background var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--white);
+  left: 0;
+  transition: transform var(--transition-fast);
+}
+
+.hamburger::before {
+  top: -6px;
+}
+
+.hamburger::after {
+  bottom: -6px;
+}
+
+.active {
+  background: transparent !important;
+}
+
+.active::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.active::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* 모바일 반응형 처리 */
+@media (max-width: 991px) {
+  .menuToggle {
+    display: flex;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--primary-deep); /* 딥 네이비 */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 100px 40px;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal) ease-in-out;
+    z-index: -1;
+  }
+  
+  .menuOpen {
+    transform: translateX(0);
+  }
+  
+  .menu {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+  
+  .menu a {
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+  }
+  
+  .phoneText {
+    display: none;
+  }
+  
+  .phoneBtn {
+    padding: 10px 14px;
+    /* CTA 버튼: 모바일 18~20px (18px 적용) */
+    font-size: 18px;
+  }
+}

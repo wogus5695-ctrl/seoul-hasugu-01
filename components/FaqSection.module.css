@@ -1,0 +1,103 @@
+/* components/FaqSection.module.css */
+.section {
+  background-color: var(--white);
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  background-color: var(--white);
+  border: 1px solid var(--neutral-line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.faqItem:hover {
+  border-color: rgba(0, 174, 239, 0.4); /* 워터 블루 호버링 */
+}
+
+.open {
+  border-color: var(--primary-ocean); /* 워터 블루 액티브 */
+}
+
+.questionBtn {
+  width: 100%;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  /* 카드 제목 - PC: 22~28px (22px 설정) */
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-deep);
+  letter-spacing: -0.5px;
+}
+
+.qText {
+  padding-right: 20px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-normal);
+  color: var(--neutral-muted);
+  flex-shrink: 0;
+}
+
+.open .iconWrapper {
+  transform: rotate(180deg);
+  color: var(--primary-ocean);
+}
+
+.chevronSvg {
+  width: 20px;
+  height: 20px;
+}
+
+.answerBox {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-fast) ease-out;
+  background-color: #F0F4F8; /* 아주 옅은 보조 배경 */
+  border-top: 0 solid var(--neutral-line);
+}
+
+.open .answerBox {
+  max-height: 300px;
+  border-top: 1px solid var(--neutral-line);
+  transition: max-height var(--transition-normal) ease-in;
+}
+
+/* 카드 본문 - PC: 16~18px (16px 설정) */
+.aText {
+  padding: 24px 30px;
+  font-size: 16px;
+  color: var(--neutral-dark);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+@media (max-width: 767px) {
+  .questionBtn {
+    padding: 18px 20px;
+    /* 모바일 카드 제목: 20~24px (20px 설정) */
+    font-size: 20px;
+  }
+  
+  /* 모바일 카드 본문: 15~17px (15px 설정) */
+  .aText {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+}

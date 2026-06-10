@@ -1,0 +1,48 @@
+/* components/FloatingCTA.module.css */
+
+/* PC에서는 숨김 */
+.wrapper {
+  display: none;
+}
+
+/* 모바일 뷰포트 (767px 이하) */
+@media (max-width: 767px) {
+  .wrapper {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-top: 1px solid rgba(11, 31, 51, 0.08);
+    padding: 10px 16px;
+    z-index: 999;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.03);
+  }
+
+  .button {
+    width: 100%;
+    background-color: var(--accent-gold); /* 앰버 #FFB020 포인트 */
+    color: var(--primary-deep);
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(255, 176, 32, 0.2);
+    transition: background var(--transition-fast);
+  }
+
+  .button:active {
+    background-color: #FFA000;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+  }
+}
+

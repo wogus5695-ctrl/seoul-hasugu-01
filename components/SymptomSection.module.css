@@ -1,0 +1,121 @@
+/* components/SymptomSection.module.css */
+.symptomSection {
+  position: relative;
+  padding: 100px 0; /* PC 패딩 (높이 약 360~460px 대역 구성) */
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(11, 31, 51, 0.72); /* 딥네이비 오버레이 (약 72% 농도로 텍스트 가독성 확보) */
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+  word-break: keep-all;
+}
+
+.titleLarge {
+  display: inline-block;
+  font-size: 48px; /* PC 대제목 크기 상향 (기존 38px) */
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  /* 형광펜 효과 유지하되 배경 이미지 위에서 튀지 않도록 조절 */
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 174, 239, 0.35) 60%);
+  padding: 0 8px;
+}
+
+.titleSmall {
+  display: block;
+  font-size: 42px; /* PC 소제목 크기 상향 (기존 34px) */
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.content {
+  font-size: 22px; /* PC 본문 크기 상향 (기존 18px) */
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 28px;
+  max-width: 860px; /* 글자 크기 상향에 맞추어 가로폭 확장 */
+  margin-left: auto;
+  margin-right: auto;
+  word-break: keep-all;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.subContent {
+  font-size: 18px; /* PC 보조문구 크기 상향 (기존 15px) */
+  line-height: 1.6;
+  color: var(--primary-ocean); /* 포인트 컬러: 워터 블루 */
+  font-weight: 800;
+  max-width: 700px; /* 글자 크기 상향에 맞추어 가로폭 확장 */
+  margin-left: auto;
+  margin-right: auto;
+  word-break: keep-all;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* 모바일 및 태블릿 대응 (767px 이하) */
+@media (max-width: 767px) {
+  .symptomSection {
+    padding: 70px 0;
+    min-height: auto;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  
+  .titleLarge {
+    font-size: 30px; /* 모바일 대제목 크기 상향 (기존 24px) */
+    margin-bottom: 4px;
+  }
+  
+  .titleSmall {
+    font-size: 26px; /* 모바일 소제목 크기 상향 (기존 21px) */
+  }
+  
+  .content {
+    font-size: 17px; /* 모바일 본문 크기 상향 (기존 15px) */
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .subContent {
+    font-size: 15px; /* 모바일 보조문구 크기 상향 (기존 13.5px) */
+  }
+}

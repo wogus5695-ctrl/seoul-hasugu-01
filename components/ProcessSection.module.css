@@ -1,0 +1,195 @@
+/* components/ProcessSection.module.css */
+.section {
+  background-color: var(--white);
+}
+
+.timelineWrapper {
+  position: relative;
+  margin-top: 60px;
+}
+
+/* PC 연결선 */
+.line {
+  position: absolute;
+  top: 48px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: rgba(11, 31, 51, 0.06);
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.stepCard {
+  background-color: var(--white);
+  border: 1px solid rgba(11, 31, 51, 0.08);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-ocean);
+  box-shadow: 0 16px 35px rgba(0, 174, 239, 0.08);
+}
+
+.badgeWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid rgba(11, 31, 51, 0.08);
+  color: var(--primary-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover .badgeWrapper {
+  background-color: var(--primary-ocean);
+  border-color: var(--primary-ocean);
+  color: var(--white);
+  transform: scale(1.08);
+}
+
+.number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary-deep);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.stepDesc {
+  font-size: 14px;
+  color: var(--neutral-muted);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.footerArea {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ctaBox a {
+  font-size: 20px;
+  padding: 18px 48px;
+  box-shadow: 0 8px 25px rgba(255, 176, 32, 0.25);
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ctaBox a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 176, 32, 0.35);
+}
+
+.onlyPc {
+  display: inline;
+}
+
+/* 태블릿 (1023px 이하) */
+@media (max-width: 1023px) {
+  .line {
+    display: none;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .stepCard {
+    padding: 24px 20px;
+  }
+}
+
+/* 소형 태블릿 및 대형 모바일 (850px 이하) */
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .stepCard {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  
+  .badgeWrapper {
+    margin-bottom: 0;
+    margin-right: 18px;
+    flex-shrink: 0;
+  }
+  
+  .stepTitle {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  
+  .stepDesc {
+    font-size: 13.5px;
+  }
+  
+  .footerArea {
+    margin-top: 40px;
+  }
+  
+  .ctaBox a {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+  
+  .onlyPc {
+    display: none;
+  }
+}
+
+.highlight {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-ocean); /* 브랜드 컬러(워터 블루) */
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+}
+
+@media (max-width: 767px) {
+  .highlight {
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+  }
+}
+

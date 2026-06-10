@@ -1,0 +1,79 @@
+/* components/CallToAction.module.css */
+.ctaSection {
+  background-color: var(--primary-deep); /* 딥 네이비 #0B1F33 (배합비율 보조) */
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.descText {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  word-break: keep-all;
+}
+
+/* PC H2 섹션 제목: 36~44px (36px 설정) */
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+
+.actionBtn {
+  margin-bottom: 24px;
+}
+
+.actionBtn a {
+  /* PC CTA 버튼: 18~22px (20px 설정) */
+  font-size: 20px;
+  padding: 20px 48px;
+}
+
+.caution {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .ctaSection {
+    padding: 60px 0;
+  }
+  
+  .descText {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  
+  /* 모바일 H2 섹션 제목: 28~34px (28px 설정) */
+  .title {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+  }
+  
+  .actionBtn a {
+    width: 100%;
+    /* 모바일 CTA 버튼: 18~20px (18px 설정) */
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+}
+
+.highlightBg {
+  background-color: var(--primary-ocean); /* 브랜드 컬러(워터 블루)로 수정 */
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: var(--white);
+}

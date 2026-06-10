@@ -1,0 +1,179 @@
+/* components/CaseSection.module.css */
+.section {
+  background-color: var(--neutral-light); /* 보조 배경 라이트 블루 #EAF7FF */
+}
+
+/* 슬라이더 전체 컨테이너 */
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 720px; /* PC 카드 권장 폭 */
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 0;
+  cursor: grab;
+}
+
+.sliderContainer:active {
+  cursor: grabbing;
+}
+
+/* 슬라이더 트랙 */
+.sliderTrack {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+/* 개별 슬라이드 */
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* 카드 UI */
+.card {
+  background-color: var(--white);
+  border: 1px solid rgba(11, 31, 51, 0.08);
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary-ocean);
+  box-shadow: 0 12px 35px rgba(0, 174, 239, 0.08);
+}
+
+/* 카드 헤더 (해시태그 + 별점) */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hashtag {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--primary-deep);
+  background-color: rgba(11, 31, 51, 0.05);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.rating {
+  font-size: 18px;
+  color: var(--accent-gold); /* 앰버/골드 계열 적용 */
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+
+/* 카드 본문 */
+.cardBody {
+  font-size: 32px; /* 16px에서 2배 크기로 증가 */
+  color: var(--neutral-dark);
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 24px;
+  word-break: keep-all;
+  min-height: 160px; /* 폰트 확대에 맞추어 카드 크기 유지용 최소 높이 확보 */
+}
+
+/* 카드 푸터 (고객명) */
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name {
+  font-size: 14px;
+  color: var(--neutral-muted);
+  font-weight: 600;
+}
+
+/* 점 인디케이터 */
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.indicatorDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--neutral-line);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.indicatorDot:hover {
+  background-color: var(--neutral-muted);
+}
+
+.activeDot {
+  background-color: var(--primary-ocean);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.onlyPc {
+  display: inline;
+}
+
+/* 모바일 반응형 처리 (767px 이하) */
+@media (max-width: 767px) {
+  .sliderContainer {
+    max-width: 100%;
+  }
+
+  .slide {
+    padding: 0 8px;
+  }
+
+  .card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .cardHeader {
+    margin-bottom: 16px;
+  }
+
+  .hashtag {
+    font-size: 13.5px;
+    padding: 4px 10px;
+  }
+
+  .rating {
+    font-size: 15px;
+  }
+
+  .cardBody {
+    font-size: 28px; /* 14.5px에서 약 2배 크기로 증가 */
+    line-height: 1.5;
+    margin-bottom: 16px;
+    min-height: 220px; /* 모바일에서 큰 폰트로 줄바꿈 시 높이 확보 */
+  }
+
+  .name {
+    font-size: 13px;
+  }
+
+  .onlyPc {
+    display: none;
+  }
+}
