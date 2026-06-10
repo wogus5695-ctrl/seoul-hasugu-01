@@ -8,6 +8,11 @@ export const metadata = {
   title: '하수구해결사 | 서울·경기·인천 하수구·싱크대·변기막힘 신속 해결',
   description: '막힌 하수구, 싱크대, 변기, 배수구, 오수관 문제를 정밀 내시경 카메라 진단과 첨단 장비로 확실하게 해결하는 배관 전문 하수구해결사입니다.',
   keywords: '하수구막힘, 싱크대막힘, 변기막힘, 배수구막힘, 오수관역류, 오수관막힘, 하수구뚫는업체, 일산하수구막힘',
+  verification: {
+    other: {
+      'naver-site-verification': '032805d701e123bb995f0528ca89c6a544ca0794',
+    },
+  },
   alternates: {
     canonical: 'https://www.allhasugu.co.kr', // 공식 운영 주소 설정
   },
