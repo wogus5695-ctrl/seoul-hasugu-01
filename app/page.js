@@ -16,8 +16,8 @@ export async function generateMetadata({ searchParams }) {
   const titleStr = `${decodedKeyword} | 하수구해결사`;
   const descStr = `${decodedKeyword}, 하수구·싱크대·변기·배수구·오수관 막힘 증상을 현장 상태에 맞게 확인하고 조치합니다. 일산을 중심으로 서울·경기·인천권 문의를 안내합니다.`;
   const canonicalUrl = k 
-    ? `https://www.sugusolver.co.kr/?k=${encodeURIComponent(k)}`
-    : 'https://www.sugusolver.co.kr';
+    ? `https://www.allhasugu.co.kr/?k=${encodeURIComponent(k)}`
+    : 'https://www.allhasugu.co.kr';
 
   return {
     title: titleStr,
@@ -33,7 +33,7 @@ export async function generateMetadata({ searchParams }) {
       type: 'website',
       images: [
         {
-          url: 'https://www.sugusolver.co.kr/images/og_image.png',
+          url: 'https://www.allhasugu.co.kr/images/og_image.png',
           width: 1200,
           height: 630,
           alt: '하수구해결사 배수구 내시경 정밀 검사 현장'
