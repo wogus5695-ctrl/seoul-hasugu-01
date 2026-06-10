@@ -34,7 +34,6 @@ export default function Header() {
             <li><a href="#process" onClick={() => setIsMenuOpen(false)}>해결 절차</a></li>
             <li><a href="#comparison" onClick={() => setIsMenuOpen(false)}>왜 해결사인가</a></li>
             <li><a href="#faq" onClick={() => setIsMenuOpen(false)}>자주 묻는 질문</a></li>
-            <li><Link href="/sitemap-gyeonggi" onClick={() => setIsMenuOpen(false)}>지역별 키워드</Link></li>
           </ul>
         </nav>
 

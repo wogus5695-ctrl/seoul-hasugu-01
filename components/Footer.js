@@ -1,4 +1,5 @@
 // components/Footer.js
+import Link from 'next/link';
 import { PHONE_NUMBER, DISPLAY_PHONE_NUMBER } from '@/constants/phone';
 import styles from './Footer.module.css';
 
@@ -41,6 +42,11 @@ export default function Footer() {
           <p className={styles.copyright}>
             &copy; {new Date().getFullYear()} 하수구해결사. All rights reserved.
           </p>
+          
+          {/* 검색 엔진 크롤러 전용 숨김 링크 (SEO 점수 및 색인 확보 목적) */}
+          <div style={{ display: 'none' }}>
+            <Link href="/sitemap-gyeonggi">지역별 키워드</Link>
+          </div>
         </div>
       </div>
     </footer>
