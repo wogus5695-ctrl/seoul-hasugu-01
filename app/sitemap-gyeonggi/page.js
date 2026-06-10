@@ -5,6 +5,10 @@ import styles from './page.module.css';
 export const metadata = {
   title: '하수구해결사 키워드 안내',
   description: '하수구해결사의 지역별 배관 막힘 작업 키워드 안내 페이지입니다. 각 키워드를 클릭하면 해당 작업명에 맞는 안내 페이지로 이동합니다.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const SECTIONS = [
