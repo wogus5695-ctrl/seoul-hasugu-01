@@ -51,7 +51,7 @@ export default function HeroSection({ keyword, hasKeyword }) {
             {displayKeyword}{eunNeun} 겉으로 예상되는 위치와<br />
             실제 막힌 구간이 다를 수 있습니다.
             <span className={styles.descSpacer}></span>
-            고객님과 <u className={styles.underline}>가장 가까운 전문가</u>가<br />
+            <u className={styles.underline}>고객님과 가장 가까운 전문가</u>가<br />
             출동합니다.
           </p>
 
