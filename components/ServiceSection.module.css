@@ -140,34 +140,49 @@
 @media (max-width: 767px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
   
   .cardImageWrapper {
-    height: 180px; /* 모바일 이미지 높이 조절 */
+    height: 145px; /* 모바일 이미지 높이 축소 */
   }
   
   .cardContent {
-    padding: 20px 20px 24px;
+    padding: 16px 16px 20px; /* 내부 패딩 축소 */
   }
   
   .cardTitle {
-    font-size: 20px;
+    font-size: 19px;
   }
   
   .cardDesc {
-    font-size: 14.5px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 16px;
   }
   
+  .symptomsBox {
+    padding-top: 14px;
+    gap: 10px;
+  }
+
+  .symptomLabel {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .symptomValue {
+    font-size: 13px;
+  }
+
   .footerArea {
-    margin-top: 40px;
+    margin-top: 32px;
   }
   
   .ctaBox a {
     width: 100%;
-    font-size: 18px;
-    padding: 16px 24px;
+    font-size: 17px;
+    padding: 14px 20px;
   }
   
   .onlyPc {

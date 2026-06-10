@@ -92,30 +92,32 @@
 /* 모바일 및 태블릿 대응 (767px 이하) */
 @media (max-width: 767px) {
   .symptomSection {
-    padding: 70px 0;
+    padding: 50px 0; /* 모바일 패딩 축소 */
     min-height: auto;
   }
   
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   
   .titleLarge {
-    font-size: 30px; /* 모바일 대제목 크기 상향 (기존 24px) */
+    font-size: 25px; /* 모바일 대제목 압축 */
     margin-bottom: 4px;
   }
   
   .titleSmall {
-    font-size: 26px; /* 모바일 소제목 크기 상향 (기존 21px) */
+    font-size: 22px; /* 모바일 소제목 압축 */
   }
   
   .content {
-    font-size: 17px; /* 모바일 본문 크기 상향 (기존 15px) */
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 15px; /* 모바일 본문 압축 */
+    line-height: 1.5;
+    margin-bottom: 16px;
+    max-width: 100%;
   }
   
   .subContent {
-    font-size: 15px; /* 모바일 보조문구 크기 상향 (기존 13.5px) */
+    font-size: 14px; /* 모바일 보조문구 압축 */
+    max-width: 100%;
   }
 }

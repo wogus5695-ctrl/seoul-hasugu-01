@@ -137,40 +137,42 @@
 /* 모바일 반응형 처리 (767px 이하) */
 @media (max-width: 767px) {
   .sliderContainer {
-    max-width: 100%;
+    width: 92%; /* 화면의 92% 너비 설정 */
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .slide {
-    padding: 0 8px;
+    padding: 0 4px;
   }
 
   .card {
-    padding: 24px 20px;
+    padding: 20px 18px; /* 카드 패딩 조절 */
     border-radius: 12px;
   }
 
   .cardHeader {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .hashtag {
-    font-size: 13.5px;
-    padding: 4px 10px;
+    font-size: 12.5px;
+    padding: 4px 8px;
   }
 
   .rating {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .cardBody {
-    font-size: 28px; /* 14.5px에서 약 2배 크기로 증가 */
-    line-height: 1.5;
-    margin-bottom: 16px;
-    min-height: 220px; /* 모바일에서 큰 폰트로 줄바꿈 시 높이 확보 */
+    font-size: 20px; /* 본문 폰트 압축 */
+    line-height: 1.45;
+    margin-bottom: 14px;
+    min-height: 130px; /* 불필요한 높이 축소 */
   }
 
   .name {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .onlyPc {

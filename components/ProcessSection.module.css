@@ -135,43 +135,59 @@
   }
 }
 
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* 모바일 (767px 이하) */
 @media (max-width: 767px) {
+  .timelineWrapper {
+    margin-top: 36px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
   
   .stepCard {
     flex-direction: row;
     text-align: left;
-    align-items: flex-start;
-    padding: 24px;
+    align-items: flex-start; /* 모바일 타임라인 정렬 */
+    padding: 16px 18px; /* 패딩 축소 */
   }
   
   .badgeWrapper {
+    width: 38px; /* 번호 배지 크기 축소 */
+    height: 38px;
     margin-bottom: 0;
-    margin-right: 18px;
+    margin-right: 14px;
     flex-shrink: 0;
+  }
+
+  .number {
+    font-size: 15px; /* 번호 폰트 축소 */
   }
   
   .stepTitle {
-    font-size: 17px;
-    margin-bottom: 6px;
+    font-size: 16px;
+    margin-bottom: 2px;
   }
   
   .stepDesc {
-    font-size: 13.5px;
+    font-size: 13px;
+    line-height: 1.45;
   }
   
+  .stepContent {
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+
   .footerArea {
-    margin-top: 40px;
-  }
-  
-  .ctaBox a {
-    width: 100%;
-    font-size: 18px;
-    padding: 16px 24px;
+    display: none; /* 모바일에서 불필요한 CTA 버튼 제거 */
   }
   
   .onlyPc {

@@ -135,7 +135,8 @@ img {
 /* 모바일 뷰포트 반응형 타이포그래피 설정 (767px 이하) */
 @media (max-width: 767px) {
   body {
-    padding-bottom: 76px; /* 모바일 하단 고정 전화 버튼에 가려지지 않도록 패딩 확보 */
+    /* 모바일 하단 고정 전화 버튼 + Safe Area 대응 패딩 확보 */
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
   }
 
   .section {

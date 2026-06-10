@@ -49,8 +49,10 @@ export default function ProcessSection() {
                 <div className={styles.badgeWrapper}>
                   <span className={styles.number}>{step.num}</span>
                 </div>
-                <h3 className={styles.stepTitle}>{step.title}</h3>
-                <p className={styles.stepDesc}>{step.desc}</p>
+                <div className={styles.stepContent}>
+                  <h3 className={styles.stepTitle}>{step.title}</h3>
+                  <p className={styles.stepDesc}>{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>

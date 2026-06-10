@@ -89,15 +89,18 @@
 }
 
 @media (max-width: 767px) {
+  .faqList {
+    gap: 10px; /* 아이템 간격 축소 */
+  }
+
   .questionBtn {
-    padding: 18px 20px;
-    /* 모바일 카드 제목: 20~24px (20px 설정) */
-    font-size: 20px;
+    padding: 16px 18px; /* 터치 영역은 유지하되 패딩 미세 조절 */
+    font-size: 17px; /* 제목 크기 조절 */
   }
   
-  /* 모바일 카드 본문: 15~17px (15px 설정) */
   .aText {
-    padding: 18px 20px;
-    font-size: 15px;
+    padding: 14px 18px;
+    font-size: 14px; /* 본문 크기 조절 */
+    line-height: 1.55;
   }
 }

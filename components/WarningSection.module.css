@@ -108,26 +108,27 @@
 /* 모바일 (767px 이하) */
 @media (max-width: 767px) {
   .grid {
-    grid-template-columns: 1fr; /* 모바일에서 1열 적재 */
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 모바일에서 2열 콤팩트 카드 배치 */
+    gap: 12px;
   }
   
   .cardImageWrapper {
-    height: 160px;
+    height: 110px; /* 이미지 높이 조절 */
   }
   
   .cardTitle {
-    font-size: 20px;
-    bottom: 16px;
-    left: 20px;
+    font-size: 16px;
+    bottom: 10px;
+    left: 12px;
   }
   
   .cardContent {
-    padding: 20px 20px 24px;
+    padding: 12px; /* 패딩 축소 */
   }
   
   .cardDesc {
-    font-size: 14.5px;
+    font-size: 12.5px; /* 글자 크기 축소 */
+    line-height: 1.45;
   }
   
   .onlyPc {

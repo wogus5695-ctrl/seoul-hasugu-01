@@ -16,7 +16,8 @@
     width: 100%;
     background-color: var(--white);
     border-top: 1px solid rgba(11, 31, 51, 0.08);
-    padding: 10px 16px;
+    /* Safe Area 대응 하단 패딩 적용 */
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
     z-index: 999;
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.03);
   }

@@ -47,27 +47,26 @@
 
 @media (max-width: 767px) {
   .ctaSection {
-    padding: 60px 0;
+    padding: 48px 0; /* 모바일 패딩 축소 */
   }
   
   .descText {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 28px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin-bottom: 20px;
   }
   
-  /* 모바일 H2 섹션 제목: 28~34px (28px 설정) */
+  /* 모바일 H2 섹션 제목 */
   .title {
-    font-size: 28px;
+    font-size: 25px;
     letter-spacing: -0.5px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   
   .actionBtn a {
     width: 100%;
-    /* 모바일 CTA 버튼: 18~20px (18px 설정) */
     font-size: 18px;
-    padding: 16px 24px;
+    padding: 14px 24px;
   }
 }
 

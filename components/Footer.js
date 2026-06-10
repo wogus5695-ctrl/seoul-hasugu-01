@@ -27,7 +27,7 @@ export default function Footer() {
             <p className={styles.phoneNum}>{DISPLAY_PHONE_NUMBER}</p>
             <p className={styles.text}>
               배관 내시경 정밀 검사 지원<br />
-              상담 접수 시 빠른 현장 방문 및 조치
+              상담 후 현장 위치와 일정에 따라 방문 가능 여부 안내
             </p>
           </div>
         </div>

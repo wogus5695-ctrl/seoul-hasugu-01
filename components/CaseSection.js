@@ -79,7 +79,7 @@ export default function CaseSection({ keyword, hasKeyword }) {
 
   useEffect(() => {
     if (isPaused) return;
-    autoPlayRef.current = setInterval(nextSlide, 4000); // 4초 슬라이드 간격
+    autoPlayRef.current = setInterval(nextSlide, 4800); // 4.8초 슬라이드 간격
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
