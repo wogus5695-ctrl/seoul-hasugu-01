@@ -2,13 +2,13 @@
 .sitemapPage {
   min-height: 100vh;
   background-color: var(--white);
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .hero {
   background-color: var(--primary-deep);
   color: var(--white);
-  padding: 160px 0 80px;
+  padding: 180px 0 90px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -27,19 +27,19 @@
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 16px;
-  letter-spacing: -1.2px;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
 }
 
 .description {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto;
@@ -48,40 +48,58 @@
 
 .bodySection {
   padding: 60px 0;
+  background-color: #F8FAFC;
 }
 
-.card {
-  max-width: 720px;
-  margin: 0 auto;
+.sectionCard {
   background-color: var(--white);
   border: 1px solid rgba(11, 31, 51, 0.08);
-  border-radius: 20px;
-  padding: 40px;
+  border-radius: 24px;
+  padding: 50px 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
 }
 
-.cardHeader {
+.sectionCard:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary-deep);
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--primary-deep);
+  padding-bottom: 16px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 32px;
-  border-bottom: 1.5px solid rgba(11, 31, 51, 0.06);
-  padding-bottom: 16px;
+  gap: 12px;
 }
 
 .marker {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
-.cardTitle {
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: var(--primary-deep);
+.groupBlock {
+  margin-bottom: 40px;
+}
+
+.groupBlock:last-child {
+  margin-bottom: 0;
+}
+
+.groupSubtitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-ocean);
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 4px solid var(--primary-ocean);
 }
 
 .linkGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
@@ -92,7 +110,7 @@
   background-color: var(--neutral-light);
   border: 1px solid rgba(11, 31, 51, 0.04);
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 14px 18px;
   transition: all var(--transition-fast);
 }
 
@@ -124,26 +142,46 @@
   color: var(--primary-ocean);
 }
 
+@media (max-width: 991px) {
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 767px) {
   .hero {
-    padding: 120px 0 60px;
+    padding: 140px 0 70px;
   }
 
   .title {
-    font-size: 1.8rem;
-  }
-  
-  .card {
-    padding: 24px 20px;
+    font-size: 1.9rem;
   }
 
-  .cardHeader {
+  .description {
+    font-size: 0.95rem;
+  }
+  
+  .sectionCard {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
     margin-bottom: 24px;
+  }
+
+  .groupSubtitle {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
   }
 
   .linkGrid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+  }
+
+  .keywordLink {
+    padding: 12px 14px;
   }
 }
-
