@@ -26,10 +26,10 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.allhasugu.co.kr/images/og_image.png',
+        url: 'https://www.allhasugu.co.kr/images/og_image_v2.png',
         width: 1200,
         height: 630,
-        alt: '하수구해결사 배수구 내시경 정밀 검사 현장'
+        alt: '하수구해결사 막힘 당일 해결 서비스 안내 썸네일'
       }
     ],
   },
