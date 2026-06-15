@@ -10,6 +10,12 @@ export default async function sitemap() {
       changeFrequency: 'daily',
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/sitemap-gyeonggi`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
   ];
 
   // 53개 세부 지역 목록

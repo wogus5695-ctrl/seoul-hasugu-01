@@ -41,7 +41,7 @@ export default function HeroSection({ keyword, hasKeyword }) {
             <span className={styles.titleLarge}>
               <span className={styles.highlight}>{displayKeyword}</span>,<br />
               <span className={styles.brandBadge}>전부 뚫어</span> 드립니다.
-            </span>
+            </span>{" "}
             <span className={styles.titleSmall}>
               서울/경기/인천 바로 출동!
             </span>
@@ -49,7 +49,7 @@ export default function HeroSection({ keyword, hasKeyword }) {
           
           <p className={styles.description}>
             {displayKeyword}{eunNeun} 겉으로 예상되는 위치와<br />
-            실제 막힌 구간이 다를 수 있습니다.
+            실제 막힌 구간이 다를 수 있습니다.{" "}
             <span className={styles.descSpacer}></span>
             <u className={styles.underline}>고객님과 가장 가까운 전문가</u>가<br />
             출동합니다.
