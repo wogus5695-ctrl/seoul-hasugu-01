@@ -61,16 +61,38 @@ export default function CaseSection({ keyword, hasKeyword }) {
     }
   ];
 
+  const isSewer = keyword.includes('하수구막힘');
+  const isSink = keyword.includes('싱크대막힘');
+  const isToilet = keyword.includes('변기막힘');
+
+  // 작업명에 따라 관련 카드가 먼저 보이게 정렬
+  let sortedCases = [...cases];
+  if (isSewer) {
+    const sewerCase = cases[0];
+    const repeatedCase = cases[9];
+    const remaining = cases.filter((_, idx) => idx !== 0 && idx !== 9);
+    sortedCases = [sewerCase, repeatedCase, ...remaining];
+  } else if (isSink) {
+    const sinkCase = cases[1];
+    const restaurantCase = cases[6];
+    const remaining = cases.filter((_, idx) => idx !== 1 && idx !== 6);
+    sortedCases = [sinkCase, restaurantCase, ...remaining];
+  } else if (isToilet) {
+    const toiletCase = cases[2];
+    const remaining = cases.filter((_, idx) => idx !== 2);
+    sortedCases = [toiletCase, ...remaining];
+  }
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const autoPlayRef = useRef();
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % cases.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % sortedCases.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + cases.length) % cases.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + sortedCases.length) % sortedCases.length);
   };
 
   const goToSlide = (index) => {
@@ -138,7 +160,7 @@ export default function CaseSection({ keyword, hasKeyword }) {
             className={styles.sliderTrack}
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            {cases.map((item, index) => (
+            {sortedCases.map((item, index) => (
               <div key={index} className={styles.slide}>
                 <div className={styles.card}>
                   <div className={styles.cardHeader}>
@@ -157,7 +179,7 @@ export default function CaseSection({ keyword, hasKeyword }) {
 
         {/* 점 indicator */}
         <div className={styles.indicators}>
-          {cases.map((_, index) => (
+          {sortedCases.map((_, index) => (
             <button
               key={index}
               className={`${styles.indicatorDot} ${index === currentIndex ? styles.activeDot : ''}`}

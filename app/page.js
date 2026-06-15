@@ -14,7 +14,17 @@ export async function generateMetadata({ searchParams }) {
   const decodedKeyword = k ? decodeURIComponent(k).replace(/-/g, ' ') : '하수구막힘';
   
   const titleStr = `${decodedKeyword} | 하수구해결사`;
-  const descStr = `${decodedKeyword}, 하수구·싱크대·변기·배수구·오수관 막힘 증상을 현장 상태에 맞게 확인하고 조치합니다. 일산을 중심으로 서울·경기·인천권 문의를 안내합니다.`;
+  
+  let descStr = `${decodedKeyword}, 하수구·싱크대·변기·배수구·오수관 막힘 증상을 현장 상태에 맞게 확인하고 조치합니다. 일산을 중심으로 서울·경기·인천권 문의를 안내합니다.`;
+  
+  if (decodedKeyword.includes('하수구막힘')) {
+    descStr = `${decodedKeyword}, 배수 지연·악취·반복 막힘 증상을 현장 상태에 맞게 확인하고 안내합니다. 일산·파주·김포를 중심으로 서울·경기·인천권 문의를 안내합니다.`;
+  } else if (decodedKeyword.includes('싱크대막힘')) {
+    descStr = `${decodedKeyword}, 주방 배수 라인 막힘·기름때·음식물 찌꺼기 누적 증상을 현장 상태에 맞게 확인하고 안내합니다. 일산·파주·김포를 중심으로 서울·경기·인천권 문의를 안내합니다.`;
+  } else if (decodedKeyword.includes('변기막힘')) {
+    descStr = `${decodedKeyword}, 변기 물 차오름·배수 불량·역류 증상을 현장 상태에 맞게 확인하고 안내합니다. 일산·파주·김포를 중심으로 서울·경기·인천권 문의를 안내합니다.`;
+  }
+
   const canonicalUrl = k 
     ? `https://www.allhasugu.co.kr/?k=${encodeURIComponent(k)}`
     : 'https://www.allhasugu.co.kr';
