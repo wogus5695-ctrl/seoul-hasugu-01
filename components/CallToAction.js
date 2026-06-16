@@ -7,7 +7,7 @@ export default function CallToAction() {
       <div className="container">
         <div className={styles.box}>
           <h2 className={styles.title}>
-            <span className={styles.highlightBg}>물이 안 빠지거나 역류</span>한다면<br />
+            <span className={styles.highlightBg}>물이 안 빠지거나 역류한다면</span><br />
             전화로 증상부터 알려주세요
           </h2>
           <p className={styles.descText}>

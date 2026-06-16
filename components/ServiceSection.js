@@ -36,7 +36,7 @@ export default function ServiceSection({ keyword, hasKeyword }) {
     </>
   ) : hasKeyword ? (
     <>
-      {keyword}{eunNeun} 배수 흐름과 막힘 위치를 확인한 뒤<br className={styles.onlyPc} />
+      {`${keyword}${eunNeun}`} 배수 흐름과 막힘 위치를 확인한 뒤<br className={styles.onlyPc} />
       현장 상태에 맞는 작업 방식으로 조치합니다.
     </>
   ) : (

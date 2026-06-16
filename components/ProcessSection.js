@@ -36,7 +36,7 @@ export default function ProcessSection() {
       <div className="container">
         <h2 className="section-title">
           막힌 곳만 보는 것이 아니라<br className={styles.onlyPc} />
-          <span className={styles.highlight}>막힌 원인을 해결</span>해야합니다.
+          <span className={styles.highlight}>막힌 원인까지 확인</span>합니다.
         </h2>
         
         <div className={styles.timelineWrapper}>
