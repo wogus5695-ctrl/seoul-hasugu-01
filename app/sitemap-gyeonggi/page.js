@@ -1,5 +1,6 @@
 // app/sitemap-gyeonggi/page.js
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -98,6 +99,7 @@ export default function SitemapGyeonggiPage() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

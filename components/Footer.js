@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { PHONE_NUMBER, DISPLAY_PHONE_NUMBER } from '@/constants/phone';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+export default function Footer({ keyword, hasKeyword }) {
+  const brandDesc = hasKeyword && keyword
+    ? `${keyword} 및 하수구, 싱크대, 변기, 배수구, 오수관 전문 해결 서비스.`
+    : '막힌 하수구, 싱크대, 변기, 배수구, 오수관 전문 해결 서비스.';
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -11,7 +15,7 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <span className={styles.logo}>하수구<span>해결사</span></span>
             <p className={styles.brandDesc}>
-              막힌 하수구, 싱크대, 변기, 배수구, 오수관 전문 해결 서비스.<br />
+              {brandDesc}<br />
               정직한 진단과 책임 있는 시공으로 신뢰를 약속드립니다.
             </p>
           </div>

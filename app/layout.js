@@ -1,7 +1,6 @@
 // app/layout.js
 import './globals.css';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
 export const metadata = {
@@ -79,7 +78,6 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
         <FloatingCTA />
       </body>
     </html>
