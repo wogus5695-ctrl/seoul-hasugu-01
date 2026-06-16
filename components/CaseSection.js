@@ -69,18 +69,24 @@ export default function CaseSection({ keyword, hasKeyword }) {
   let sortedCases = [...cases];
   if (isSewer) {
     const sewerCase = cases[0];
+    const storeCase = cases[7];
+    const villaCase = cases[8];
     const repeatedCase = cases[9];
-    const remaining = cases.filter((_, idx) => idx !== 0 && idx !== 9);
-    sortedCases = [sewerCase, repeatedCase, ...remaining];
+    const remaining = cases.filter((_, idx) => idx !== 0 && idx !== 7 && idx !== 8 && idx !== 9);
+    sortedCases = [sewerCase, storeCase, villaCase, repeatedCase, ...remaining];
   } else if (isSink) {
     const sinkCase = cases[1];
     const restaurantCase = cases[6];
-    const remaining = cases.filter((_, idx) => idx !== 1 && idx !== 6);
-    sortedCases = [sinkCase, restaurantCase, ...remaining];
+    const sewerCase = cases[3];
+    const repeatedCase = cases[9];
+    const remaining = cases.filter((_, idx) => idx !== 1 && idx !== 6 && idx !== 3 && idx !== 9);
+    sortedCases = [sinkCase, restaurantCase, sewerCase, repeatedCase, ...remaining];
   } else if (isToilet) {
     const toiletCase = cases[2];
-    const remaining = cases.filter((_, idx) => idx !== 2);
-    sortedCases = [toiletCase, ...remaining];
+    const villaCase = cases[8];
+    const repeatedCase = cases[9];
+    const remaining = cases.filter((_, idx) => idx !== 2 && idx !== 8 && idx !== 9);
+    sortedCases = [toiletCase, villaCase, repeatedCase, ...remaining];
   }
 
   const [currentIndex, setCurrentIndex] = useState(0);
