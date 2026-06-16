@@ -8,6 +8,7 @@ import CaseSection from '@/components/CaseSection';
 import FaqSection from '@/components/FaqSection';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import RelatedKeywords from '@/components/RelatedKeywords';
 
 // 동적 메타데이터 생성 함수 (쿼리 파라미터 k 기반)
 export async function generateMetadata({ searchParams }) {
@@ -75,6 +76,7 @@ export default function Home({ searchParams }) {
       <ProcessSection />
       <CaseSection keyword={decodedKeyword} hasKeyword={hasKeyword} />
       <FaqSection keyword={decodedKeyword} hasKeyword={hasKeyword} />
+      <RelatedKeywords keyword={decodedKeyword} hasKeyword={hasKeyword} />
       <CallToAction />
       <Footer keyword={decodedKeyword} hasKeyword={hasKeyword} />
     </>

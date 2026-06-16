@@ -1,0 +1,83 @@
+/* components/RelatedKeywords.module.css */
+.section {
+  background-color: var(--neutral-light); /* 연한 라이트블루 배경 */
+  padding: 40px 0; /* compact하게 구성하기 위해 패딩을 기존 80px에서 40px로 축소 */
+  border-top: 1px solid var(--neutral-line);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-deep); /* 딥네이비 색상 */
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--neutral-muted);
+  text-align: center;
+  margin-bottom: 24px;
+  word-break: keep-all;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.linkPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: var(--white);
+  border: 1px solid var(--neutral-line);
+  border-radius: 30px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--primary-deep);
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.linkPill:hover {
+  background-color: var(--primary-ocean);
+  color: var(--white);
+  border-color: var(--primary-ocean);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 174, 239, 0.2);
+}
+
+/* 모바일 뷰포트 (767px 이하) */
+@media (max-width: 767px) {
+  .section {
+    padding: 32px 0;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .grid {
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .linkPill {
+    padding: 8px 16px;
+    font-size: 13.5px;
+  }
+}
