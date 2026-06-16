@@ -96,6 +96,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   word-break: keep-all;
+  line-height: 1.6;
 }
 
 /* 명확하고 시인성 높은 CTA 버튼 */

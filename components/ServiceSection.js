@@ -23,11 +23,11 @@ export default function ServiceSection({ keyword, hasKeyword }) {
 
   let subTitleText = '';
   if (isSewer) {
-    subTitleText = `${keyword}${eunNeun} 배수구 주변에 물이 고이거나 악취가 올라오는 증상으로 시작되는 경우가 많습니다. 겉으로 보이는 배수구만 문제가 아닐 수 있어 배수 흐름과 막힌 구간을 함께 확인해야 합니다.`;
+    subTitleText = `${keyword}${eunNeun} 배수구 주변에 물이 고이는 배수 지연이나 악취가 올라오는 증상으로 시작되어 반복 막힘으로 이어지는 경우가 많습니다. 겉으로 보이는 배수구만 문제가 아닐 수 있어 배수 흐름과 막힌 구간을 함께 확인해야 합니다.`;
   } else if (isSink) {
-    subTitleText = `${keyword}${eunNeun} 주방 배수 라인에 기름때와 음식물 찌꺼기가 쌓이면서 반복되는 경우가 많습니다. 물 빠짐이 느려지거나 냄새가 올라온다면 싱크대 아래 배관과 배수 흐름을 함께 확인해야 합니다.`;
+    subTitleText = `${keyword}${eunNeun} 주방 배수 라인에 기름때와 음식물 찌꺼기가 쌓이면서 역류가 반복되는 경우가 많습니다. 물 빠짐이 느려지거나 냄새가 올라온다면 싱크대 아래 배관과 배수 흐름을 함께 확인해야 합니다.`;
   } else if (isToilet) {
-    subTitleText = `${keyword}${eunNeun} 물이 차오르거나 내려가지 않는 증상으로 바로 불편이 생깁니다. 이 상태에서 반복해서 물을 내리면 넘칠 수 있으므로 사용을 멈추고 막힘 상태를 확인하는 것이 좋습니다.`;
+    subTitleText = `${keyword}${eunNeun} 물 차오름이나 물이 내려가지 않는 증상으로 바로 불편이 생깁니다. 이 상태에서 무리한 물내림을 반복하면 넘치거나 역류할 수 있으므로 사용을 멈추고 막힘 상태를 확인하는 것이 좋습니다.`;
   }
 
   const subTitle = subTitleText ? (
